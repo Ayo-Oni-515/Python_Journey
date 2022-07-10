@@ -1,5 +1,6 @@
 from random import randrange
 b = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
+used = [5]
 def display_board(board):
     # The function accepts one parameter containing the board's current status
     # and prints it out to the console.
@@ -27,6 +28,7 @@ def enter_move(board):
     for i in range(len(board)):
         for j in range(3):
             if board[i][j] == user_input:
+                used.append(user_input)
                 board[i][j] = "O"
                 break   
             # elif board[i][j] == "X": 
@@ -60,15 +62,21 @@ def victory_for(board, sign):
 def draw_move(board):
     # The function draws the computer's move and updates the board.
     computer_input = randrange(1, 10)
+    # while computer_input in used:
+    while computer_input in used:
+        computer_input = randrange(1, 10)
+        if len(used) == 9:
+            break
     for i in range(len(board)):
         for j in range(3):
             if board[i][j] == computer_input:
+                used.append(computer_input)
                 board[i][j] = "X"
                 break    
     return
 move = 1
 display_board(b)
-while move < 8:
+while move < 5:
     enter_move(b)
     draw_move(b)
     display_board(b)
