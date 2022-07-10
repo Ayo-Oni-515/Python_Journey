@@ -31,10 +31,6 @@ def enter_move(board):
                 used.append(user_input)
                 board[i][j] = "O"
                 break   
-            # elif board[i][j] == "X": 
-            #     print("Enter a valid Input")
-            #     user_input = int(input("Enter your move: "))
-            #     break
     return 
 
 def make_list_of_free_fields(board):
@@ -55,14 +51,22 @@ def make_list_of_free_fields(board):
 def victory_for(board, sign):
     # The function analyzes the board's status in order to check if 
     # the player using 'O's or 'X's has won the game
-    for check in board:
-        pass
-    pass
+    for a in range(len(board)):
+        if sign == board[a][0] and sign == board[a][1] and sign == board[a][2]:
+                return True
+                break
+        elif sign == board[0][a] and sign == board[1][0] and sign == board[2][a]:
+                return True
+                break 
+    if sign == board[0][0] and sign == board[1][1] and sign == board[2][2]:
+        return True
+    elif sign == board[0][2] and sign == board[1][1] and sign == board[2][0]:
+        return True
+    return False
 
 def draw_move(board):
     # The function draws the computer's move and updates the board.
     computer_input = randrange(1, 10)
-    # while computer_input in used:
     while computer_input in used:
         computer_input = randrange(1, 10)
         if len(used) == 9:
@@ -78,7 +82,16 @@ move = 1
 display_board(b)
 while move < 5:
     enter_move(b)
+    if victory_for(b, "O"):
+        print("You Won.")
+        display_board(b)
+        break
     draw_move(b)
+    if victory_for(b, "X"):
+        print("Computer Won.")
+        display_board(b)
+        break
     display_board(b)
     move += 1
-# make_list_of_free_fields(b)
+if not victory_for(b, "O") and not victory_for(b, "X"):
+    print("Game Inconclusive")
