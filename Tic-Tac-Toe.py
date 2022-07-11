@@ -1,21 +1,21 @@
 from random import randrange
-b = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
-used = [5]
+board = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
+used = [5] #This list stores the set of numbers removed from the board list 
 def display_board(board):
     # The function accepts one parameter containing the board's current status
     # and prints it out to the console.
     print(f"""
 +-------+-------+-------+
 |       |       |       |
-|   {b[0][0]}   |   {b[0][1]}   |   {b[0][2]}   |
+|   {board[0][0]}   |   {board[0][1]}   |   {board[0][2]}   |
 |       |       |       |
 +-------+-------+-------+
 |       |       |       |
-|   {b[1][0]}   |   {b[1][1]}   |   {b[1][2]}   |
+|   {board[1][0]}   |   {board[1][1]}   |   {board[1][2]}   |
 |       |       |       |
 +-------+-------+-------+
 |       |       |       |
-|   {b[2][0]}   |   {b[2][1]}   |   {b[2][2]}   | 
+|   {board[2][0]}   |   {board[2][1]}   |   {board[2][2]}   | 
 |       |       |       |
 +-------+-------+-------+
     """)
@@ -53,11 +53,11 @@ def victory_for(board, sign):
     # the player using 'O's or 'X's has won the game
     for a in range(len(board)):
         if sign == board[a][0] and sign == board[a][1] and sign == board[a][2]:
-                return True
-                break
-        elif sign == board[0][a] and sign == board[1][0] and sign == board[2][a]:
-                return True
-                break 
+            return True
+            break
+        elif sign == board[0][a] and sign == board[1][a] and sign == board[2][a]:
+            return True
+            break 
     if sign == board[0][0] and sign == board[1][1] and sign == board[2][2]:
         return True
     elif sign == board[0][2] and sign == board[1][1] and sign == board[2][0]:
@@ -79,19 +79,20 @@ def draw_move(board):
                 break    
     return
 move = 1
-display_board(b)
+display_board(board)
 while move < 5:
-    enter_move(b)
-    if victory_for(b, "O"):
+    enter_move(board)
+    display_board(board)
+    if victory_for(board, "O"):
         print("You Won.")
-        display_board(b)
+        display_board(board)
         break
-    draw_move(b)
-    if victory_for(b, "X"):
+    draw_move(board)
+    if victory_for(board, "X"):
         print("Computer Won.")
-        display_board(b)
+        display_board(board)
         break
-    display_board(b)
+    display_board(board)
     move += 1
-if not victory_for(b, "O") and not victory_for(b, "X"):
+if not victory_for(board, "O") and not victory_for(board, "X"):
     print("Game Inconclusive")
