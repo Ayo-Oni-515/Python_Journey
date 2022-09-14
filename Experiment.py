@@ -291,7 +291,7 @@
 # print(my_list)
 # #
 # #
-# SEQUENTIAL SEARCH IN AN UNSORTED LIST (FOR LOOP)
+# SEQUENTIAL/LINEAR SEARCH IN AN UNSORTED LIST (FOR LOOP)
 # my_list1 = [5,8,9,2,3,1,6,0,4,7]
 # my_list_comp = int(input("Enter a number between 0 and 9: "))
 # my_list_len = len(my_list1)
@@ -304,7 +304,7 @@
 #     counter += 1
 # #
 # #
-# SEQUENTIAL SEARCH IN AN UNSORTED LIST (WHILE LOOP)
+# SEQUENTIAL/LINEAR SEARCH IN AN UNSORTED LIST (WHILE LOOP)
 # my_list1 = [5, 8, 9, 2, 3, 1, 6, 0, 4, 7]
 # my_list_comp = int(input("Enter a number between 0 and 9: "))
 # my_list_len = len(my_list1)
@@ -321,8 +321,8 @@
 # #
 # #
 # BINARY SEARCH IN A SORTED LIST
-# my_list_comp = int(input("Enter a number between 0 and 9: "))
-# my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# my_list_comp = int(input("Enter a number between 1 and 16: "))
+# my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 # first = 0
 # last = len(my_list) - 1
 # found = False
@@ -332,14 +332,14 @@
 #     if my_list_comp == my_list[middle]:
 #         found = True
 #         print("Data found at index", middle)
-#     else:
-#         print("Data not found")
+#     elif my_list_comp != my_list[middle]:
 #         if my_list_comp < my_list[middle]:
-#             last = middle + 1
-#         else:
+#             last = middle - 1
+#         elif my_list_comp > my_list[middle]:
 #             first = middle + 1
-#     indeX += 1 
-# #
+#             if last < first:
+#                 print("Data not found")
+# # 
 # #
 # SELECTION SORT: (FOR LOOP)
 #my_list = [3, 4, 6, 5, 10, 2, 1, 7, 0, 8, 9, 11]
@@ -642,7 +642,8 @@
 #     return
 # answer = quad()
 # print(answer)
-
+# #
+# #
 # #An empty list is created to store all the data obtained
 # store = []
 # i = 0
@@ -715,7 +716,8 @@
 #         counter += 1
 #     time.sleep(1)
 #     print(name, ":", adding / counter)
-
+# #
+# #
 # def is_year_leap(year):
 # 	if year % 4 != 0:
 # 	    return False
@@ -777,7 +779,8 @@
 # 		print("OK")
 # 	else:
 # 		print("Failed")
-
+# #
+# #
 #Copied
 # import sys
 # list=[1,2,3,4]
@@ -811,3 +814,176 @@
 #     fahrenheit_temp = float(input("Enter the temperature (fahrenheit): "))
 #     cal_temp = ((5 * (fahrenheit_temp - 32)) / 9)
 #     print("The value of ", fahrenheit_temp, " is ", cal_temp, " in Celsius")
+# #
+# #
+# Tic-Tac-Toe Program
+# from random import randrange
+# board = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
+# used = [5] #This list stores the set of numbers removed from the board list 
+# def display_board(board):
+#     # The function accepts one parameter containing the board's current status
+#     # and prints it out to the console.
+#     print(f"""
+# +-------+-------+-------+
+# |       |       |       |
+# |   {board[0][0]}   |   {board[0][1]}   |   {board[0][2]}   |
+# |       |       |       |
+# +-------+-------+-------+
+# |       |       |       |
+# |   {board[1][0]}   |   {board[1][1]}   |   {board[1][2]}   |
+# |       |       |       |
+# +-------+-------+-------+
+# |       |       |       |
+# |   {board[2][0]}   |   {board[2][1]}   |   {board[2][2]}   | 
+# |       |       |       |
+# +-------+-------+-------+
+#     """)
+#     return 
+
+# def enter_move(board):
+#     # The function accepts the board's current status, asks the user about their move, 
+#     # checks the input, and updates the board according to the user's decision.
+#     user_input = int(input("Enter your move: "))
+#     for i in range(len(board)):
+#         for j in range(3):
+#             if board[i][j] == user_input:
+#                 used.append(user_input)
+#                 board[i][j] = "O"
+#                 break   
+#     return 
+
+# def make_list_of_free_fields(board):
+#     # The function browses the board and builds a list of all the free squares; 
+#     # the list consists of tuples, while each tuple is a pair of row and column numbers.
+#     used = []
+#     free = []
+#     for i in range(len(board)):
+#         for j in range(3):
+#             if board[i][j] == "X" or board[i][j] == "O":
+#                 new = (i, j)
+#                 used.append(new)
+#             else:
+#                 new = (i, j)
+#                 free.append(new)
+#     return used
+
+# def victory_for(board, sign):
+#     # The function analyzes the board's status in order to check if 
+#     # the player using 'O's or 'X's has won the game
+#     for a in range(len(board)):
+#         if sign == board[a][0] and sign == board[a][1] and sign == board[a][2]:
+#             return True
+#             break
+#         elif sign == board[0][a] and sign == board[1][a] and sign == board[2][a]:
+#             return True
+#             break 
+#     if sign == board[0][0] and sign == board[1][1] and sign == board[2][2]:
+#         return True
+#     elif sign == board[0][2] and sign == board[1][1] and sign == board[2][0]:
+#         return True
+#     return False
+
+# def draw_move(board):
+#     # The function draws the computer's move and updates the board.
+#     computer_input = randrange(1, 10)
+#     while computer_input in used:
+#         computer_input = randrange(1, 10)
+#         if len(used) == 9:
+#             break
+#     for i in range(len(board)):
+#         for j in range(3):
+#             if board[i][j] == computer_input:
+#                 used.append(computer_input)
+#                 board[i][j] = "X"
+#                 break    
+#     return
+# move = 1
+# display_board(board)
+# while move < 5:
+#     enter_move(board)
+#     display_board(board)
+#     if victory_for(board, "O"):
+#         print("You Won.")
+#         display_board(board)
+#         break
+#     draw_move(board)
+#     if victory_for(board, "X"):
+#         print("Computer Won.")
+#         display_board(board)
+#         break
+#     display_board(board)
+#     move += 1
+# if not victory_for(board, "O") and not victory_for(board, "X"):
+#     print("Game Inconclusive")
+# #
+# #
+
+# Dr Adenowo
+# # Assignment 1
+# def quadratic(a = 0, b = 0, c = 0):
+#     root_1 = ((-1 * b) + (((b ** 2) - (4 * a * c)) ** 0.5)) / (2 * a)
+#     root_2 = ((-1 * b) - (((b ** 2) - (4 * a * c)) ** 0.5)) / (2 * a)
+#     print("The roots are:", root_1,"and",root_2)
+#     return
+# # Sample Problem
+# quadratic(1, 5, 6)
+# #
+# #Assignment 2
+# character = "My best course is ECE 319"
+# new = character.upper()
+# num = ["0", "1", "2","3", "4", "5", "6", "7", "8", "9", "0"]
+# alphabets = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+# total_num = 0
+# total_alphabetic = 0
+
+# for val in new:
+#     if val in num:
+#         total_num += 1
+#     elif val in alphabets:
+#         total_alphabetic += 1
+    
+# print(total_alphabetic, total_num,len(character))
+# #
+# #Assignment 3:
+# main_stack = []
+# temporary_stack = []
+# main_stack.append(100)
+# main_stack.append(50)
+# main_stack.append(60)
+# main_stack.append(45)
+# main_stack.append(30)
+# main_stack.append(10)
+# main_stack.append(55)
+# temporary_stack.append(main_stack.pop(len(main_stack) - 1))
+# main_stack.append((main_stack.pop(len(main_stack) - 1)) * 2)
+# main_stack.append(temporary_stack.pop(len(temporary_stack) - 1))
+# temporary_stack.append(main_stack.pop(len(main_stack) - 1))
+# temporary_stack.append(main_stack.pop(len(main_stack) - 1))
+# temporary_stack.append(main_stack.pop(len(main_stack) - 1))
+# main_stack.append((main_stack.pop(len(main_stack) - 1)) - 5)
+# while len(temporary_stack) != 0:
+#     main_stack.append(temporary_stack.pop(len(temporary_stack) - 1))        
+# print(main_stack)
+# print(temporary_stack)
+# #
+# #Assigment 4: Queue
+# 
+# #
+# arr_list = []
+# even = 2
+# for i in range(8):
+#     arr_list.append(even)
+#     even += 2
+# print(arr_list)
+
+# for i in range(8):
+#     del arr_list[i]
+# print(arr_list)
+# new = [] Check Later
+# i = 0 Check Later
+# var = 2 Check Later
+# while i < 8: Check Later
+#     new[i] = var Check Later
+#     var += 2 Check Later
+#     i += 1 Check Later
+# print(new)  Check Later
