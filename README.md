@@ -1,2 +1,2 @@
 # Python_Journey
-This file contains several python programs I've worked since I started learning the language 
+This repository is shows my overall progress in the language.
