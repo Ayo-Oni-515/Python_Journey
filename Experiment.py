@@ -62,13 +62,13 @@
 # #
 # #
 # name = "ayodeji"
-# for i in name: 
+# for i in name:
 #    print(i)
 # #
 # #
 # power = 1
 # for expo in range(10000):
-#    print("2 to the power of", expo, "is", power) 
+#    print("2 to the power of", expo, "is", power)
 #    power *= 2
 # #
 # #
@@ -108,7 +108,7 @@
 # print("You've successfully left the loop.")
 # #
 # #
-# var = "ayodeji" 
+# var = "ayodeji"
 # for i in var:
 #    if i == "a":
 #        continue
@@ -254,7 +254,7 @@
 # #        guess = (guess + (square / guess)) / 2.0
 # #        epsilon = abs(square - (guess * guess))
 # #print("The square root of ",square," is ",guess)
-# #        
+# #
 # #
 # #numbers = [10, 5, 7, 2, 1]
 # #print("Original list content:", numbers)  # Printing original list content.
@@ -275,7 +275,7 @@
 # #
 # #
 # my_list_len = int(input("Enter the list length: "))
-# my_list = []           
+# my_list = []
 # counter = 0
 # while my_list_len > counter:
 #        my_list_element = int(input("Enter list element: "))
@@ -284,7 +284,7 @@
 # print(my_list)
 # #
 # #
-# my_list = []  
+# my_list = []
 # # Creating an empty list.
 # for i in range(5):
 #     my_list.append(i)
@@ -295,7 +295,7 @@
 # my_list1 = [5,8,9,2,3,1,6,0,4,7]
 # my_list_comp = int(input("Enter a number between 0 and 9: "))
 # my_list_len = len(my_list1)
-# counter = 0 
+# counter = 0
 # for i in my_list1:
 #     if my_list_comp != i:
 #         print("Data Not Found at index", counter)
@@ -339,12 +339,12 @@
 #             first = middle + 1
 #             if last < first:
 #                 print("Data not found")
-# # 
+# #
 # #
 # SELECTION SORT: (FOR LOOP)
 #my_list = [3, 4, 6, 5, 10, 2, 1, 7, 0, 8, 9, 11]
 #length = len(my_list)
-#for i in range(length):
+# for i in range(length):
 #    min_ind = i
 #    for k in range(i + 1, length):
 #        Sorts from LTH: Each Code block is different
@@ -353,9 +353,9 @@
 #        Sorts from HTL: Each Code block is different
 #        if my_list[k] > my_list[i]:
 #            my_list[k], my_list[i] = my_list[i], my_list[k]
-        # Sorts from LTH: Each Code block is different
-#        if my_list[min_ind] > my_list[k]:      
-#            min_ind = k    
+# Sorts from LTH: Each Code block is different
+#        if my_list[min_ind] > my_list[k]:
+#            min_ind = k
 #    my_list[i], my_list[min_ind] = my_list[min_ind], my_list[i]
 # print(my_list)
 # #
@@ -392,17 +392,17 @@
 # print(my_list)
 # #
 # #
-#INSERTION SORT
+# INSERTION SORT
 # my_list = [9, 4, 1, 6, 3, 7, 2, 5, 10, 8, 11]
-# list_len = len(my_list) 
+# list_len = len(my_list)
 # for i in range(1, list_len):
 #     comp = my_list[i]
 #     j = i - 1
 #     while j >= 0 and comp < my_list[j]:
 #         my_list[j + 1] = my_list[j]
 #         j -= 1
-#     my_list[j + 1] = comp 
-# print(my_list) 
+#     my_list[j + 1] = comp
+# print(my_list)
 # #
 # #
 # my_list = [8, 10, 6, 2, 4]
@@ -412,12 +412,12 @@
 # #
 #my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
 #new_list = []
-#for i in my_list:
+# for i in my_list:
 #    if i not in new_list:
 #        new_list.append(i)
 #    my_list = new_list[:]
 #print("The list with unique elements only:")
-#print(my_list)
+# print(my_list)
 # #
 # #
 # board = []
@@ -502,7 +502,7 @@
 # 		return False
 # 	else:
 # 		return True
-# 
+#
 # def days_in_month(year, month):
 #     year_1 = [31, 28, 31, 30, 31, 30, 31, 31, 31, 31, 30, 31]
 #     year_2 = [31, 29, 31, 30, 31, 30, 31, 31, 31, 31, 30, 31]
@@ -536,7 +536,7 @@
 # 	if result == test_results[i]:
 # 		print("OK")
 # 	else:
-#		print("Failed")
+# print("Failed")
 # #
 # #
 # def is_year_leap(year):
@@ -591,7 +591,7 @@
 # print(empty_dictionary)
 # #
 # #
-#INCOMPLETE ERROR
+# INCOMPLETE ERROR
 # remainder = []
 # answer = []
 # def base2_converter(number, base):
@@ -614,7 +614,7 @@
 #         print(i, end = "")
 #     return
 # base2_converter(11, 2)
-#INCOMPLETE ERROR
+# INCOMPLETE ERROR
 # #
 # #
 # def quad():
@@ -675,8 +675,8 @@
 #         grade = "E"
 #     else:
 #         grade = "F"
-    
-    
+
+
 #     details.append(matric_number) #Each data obtained is added to the list "details"
 #     details.append(full_name) #Each data obtained is added to the list "details"
 #     details.append(ca) #Each data obtained is added to the list "details"
@@ -690,7 +690,7 @@
 # for i in store:
 #     print(i, end = "\n") #All the data captured is printed
 
-#Copied
+# Copied
 # import time
 # school_class = {}
 
@@ -698,11 +698,11 @@
 #     name = input("Enter the student's name: ")
 #     if name == '':
 #         break
-    
+
 #     score = int(input("Enter the student's score (0-10): "))
 #     if score not in range(0, 11):
 # 	    break
-    
+
 #     if name in school_class:
 #         school_class[name] += (score,)
 #     else:
@@ -781,7 +781,7 @@
 # 		print("Failed")
 # #
 # #
-#Copied
+# Copied
 # import sys
 # list=[1,2,3,4]
 # it = iter(list) # this builds an iterator object
@@ -819,7 +819,7 @@
 # Tic-Tac-Toe Program
 # from random import randrange
 # board = [[1, 2, 3], [4, "X", 6], [7, 8, 9]]
-# used = [5] #This list stores the set of numbers removed from the board list 
+# used = [5] #This list stores the set of numbers removed from the board list
 # def display_board(board):
 #     # The function accepts one parameter containing the board's current status
 #     # and prints it out to the console.
@@ -834,14 +834,14 @@
 # |       |       |       |
 # +-------+-------+-------+
 # |       |       |       |
-# |   {board[2][0]}   |   {board[2][1]}   |   {board[2][2]}   | 
+# |   {board[2][0]}   |   {board[2][1]}   |   {board[2][2]}   |
 # |       |       |       |
 # +-------+-------+-------+
 #     """)
-#     return 
+#     return
 
 # def enter_move(board):
-#     # The function accepts the board's current status, asks the user about their move, 
+#     # The function accepts the board's current status, asks the user about their move,
 #     # checks the input, and updates the board according to the user's decision.
 #     user_input = int(input("Enter your move: "))
 #     for i in range(len(board)):
@@ -849,11 +849,11 @@
 #             if board[i][j] == user_input:
 #                 used.append(user_input)
 #                 board[i][j] = "O"
-#                 break   
-#     return 
+#                 break
+#     return
 
 # def make_list_of_free_fields(board):
-#     # The function browses the board and builds a list of all the free squares; 
+#     # The function browses the board and builds a list of all the free squares;
 #     # the list consists of tuples, while each tuple is a pair of row and column numbers.
 #     used = []
 #     free = []
@@ -868,7 +868,7 @@
 #     return used
 
 # def victory_for(board, sign):
-#     # The function analyzes the board's status in order to check if 
+#     # The function analyzes the board's status in order to check if
 #     # the player using 'O's or 'X's has won the game
 #     for a in range(len(board)):
 #         if sign == board[a][0] and sign == board[a][1] and sign == board[a][2]:
@@ -876,7 +876,7 @@
 #             break
 #         elif sign == board[0][a] and sign == board[1][a] and sign == board[2][a]:
 #             return True
-#             break 
+#             break
 #     if sign == board[0][0] and sign == board[1][1] and sign == board[2][2]:
 #         return True
 #     elif sign == board[0][2] and sign == board[1][1] and sign == board[2][0]:
@@ -895,7 +895,7 @@
 #             if board[i][j] == computer_input:
 #                 used.append(computer_input)
 #                 board[i][j] = "X"
-#                 break    
+#                 break
 #     return
 # move = 1
 # display_board(board)
@@ -917,7 +917,6 @@
 #     print("Game Inconclusive")
 # #
 # #
-
 # Dr Adenowo
 # # Assignment 1
 # def quadratic(a = 0, b = 0, c = 0):
@@ -928,21 +927,21 @@
 # # Sample Problem
 # quadratic(1, 5, 6)
 # #
-# #Assignment 2
+# #
+# Assignment 2
 # character = "My best course is ECE 319"
 # new = character.upper()
 # num = ["0", "1", "2","3", "4", "5", "6", "7", "8", "9", "0"]
 # alphabets = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 # total_num = 0
 # total_alphabetic = 0
-
 # for val in new:
 #     if val in num:
 #         total_num += 1
 #     elif val in alphabets:
 #         total_alphabetic += 1
-    
 # print(total_alphabetic, total_num,len(character))
+# #
 # #
 # #Assignment 3:
 # main_stack = []
@@ -962,20 +961,18 @@
 # temporary_stack.append(main_stack.pop(len(main_stack) - 1))
 # main_stack.append((main_stack.pop(len(main_stack) - 1)) - 5)
 # while len(temporary_stack) != 0:
-#     main_stack.append(temporary_stack.pop(len(temporary_stack) - 1))        
+#     main_stack.append(temporary_stack.pop(len(temporary_stack) - 1))
 # print(main_stack)
 # print(temporary_stack)
 # #
-# #Assigment 4: Queue
-# 
 # #
+# #Assigment 4: Queue
 # arr_list = []
 # even = 2
 # for i in range(8):
 #     arr_list.append(even)
 #     even += 2
 # print(arr_list)
-
 # for i in range(8):
 #     del arr_list[i]
 # print(arr_list)
@@ -987,3 +984,176 @@
 #     var += 2 Check Later
 #     i += 1 Check Later
 # print(new)  Check Later
+# #
+# #
+# def mysplit(strng):
+#     strng = strng.strip()
+#     ls_strng = []
+#     output = []
+#     strng += " "
+#     if strng:
+#         sub_output_1 = [i for i in strng]
+#     elif not strng and strng.isspace():
+#         return []
+#     for ch_1 in sub_output_1:
+#         if not ch_1.isspace():
+#             ls_strng.append(ch_1)
+#         elif strng.index(ch_1) > 0 and ch_1.isspace():
+#             ls_strng = "".join(ls_strng)
+#             output.append(ls_strng)
+#             ls_strng = list(ls_strng)
+#             ls_strng.clear()
+#     return output
+# print(mysplit("To be or not to be, that is the question"))
+# print(mysplit("To be or not to be,that is the question"))
+# print(mysplit("   "))
+# print(mysplit(" abc "))
+# print(mysplit(""))
+# print(mysplit("phi chi\npsi"))
+# #
+# #
+# Caesar's Cipher
+# word = input("Enter character to be encrypted: ")
+# shift_value = int(input("Enter shift value ranging from (1 - 25): "))
+# def caesar(strng, shift):
+#     output = ""
+#     if shift > 25 or shift < 1:
+#         return "Enter a valid shift value"
+#     for i in strng:
+#         if i.isalpha() and i.isupper():
+#             output_code = 0
+#             code = ord(i)
+#             output_code += code + shift
+#             if output_code > ord("Z"):
+#                 diff = output_code - ord("Z")
+#                 new_output_code = ord("A") + diff - 1
+#                 output += chr(new_output_code)
+#                 continue
+#             output += chr(output_code)
+#         elif i.isalpha() and i.islower():
+#             output_code = 0
+#             code = ord(i)
+#             output_code += code + shift
+#             if output_code > ord("z"):
+#                 diff = output_code - ord("z")
+#                 new_output_code = ord("a") + diff - 1
+#                 output += chr(new_output_code)
+#                 continue
+#             output += chr(output_code)
+#         elif i.isspace() or i.isdigit():
+#             output += i
+#     return output
+# print(caesar(word, shift_value))
+# #
+# #
+# def palindrome(strng):
+#     if strng.isspace() or strng == None:
+#         return "Value is empty"
+#     strng = strng.lower()
+#     strng = strng.replace(" ", "")
+#     comp = -1
+#     count = 0
+#     strng_length = len(strng)
+#     for i in strng:
+#         if i == strng[comp]:
+#             comp -= 1
+#             count += 1
+#         else:
+#             continue
+#     if count == strng_length:
+#         return "It's a palindrome"
+#     else:
+#         return "It's not a palindrome"
+# strng = input("Enter first word/sentence: ")
+# print(palindrome(strng))
+# #
+# #
+# def anagram(strng1, strng2):
+#     if not strng1 or not strng2:
+#         return "Not Anagrams"
+#     strng1 = strng1.lower().replace(" ", "")
+#     strng2 = strng2.lower().replace(" ", "")
+#     count = 0
+#     strng1_length = len(strng1)
+#     for i in strng1:
+#         if i in strng2:
+#             count  += 1
+#         else:
+#             continue
+#     if count == strng1_length:
+#         return "Anagrams"
+#     else:
+#         return "Not Anagrams"
+# print(anagram("Modern", "Norman"))
+# #
+# #
+# Digit of life
+# dob = input("Enter your date of birth in the format (YYYY MM DD): ")
+# def dol(arg):
+#     arg = arg.replace(" ", "")
+#     arg = [int(i) for i in arg]
+#     sum = 0
+#     for i in arg:
+#         if i + sum > 9:
+#             continue
+#         else:
+#             sum += i
+#     return sum
+# print(dol(dob))
+# #
+# #
+# Find a word
+# def word(strng1, strng2):
+#     strng1 = strng1.lower()
+#     strng2 = strng2.lower()
+#     count = 0
+#     for i in strng1:
+#         if strng2.find(i) != -1:
+#             count += 1
+#     if count == len(strng1):
+#         return "Yes"
+#     else:
+#         return "No"
+# print(word("donut", "Nabucodonosor"))
+# #
+# #
+# class Vowels:
+#     def __init__(this):
+#         this.__strng = ""
+#         this.result = ""
+#         this.count = 0
+#     def process(this, val):
+#         try:
+#             val = val.lower()
+#             this.__strng += val
+#         except (ValueError, AttributeError, SyntaxError):
+#             return "Invalid syntax"
+#         for i in this.__strng:
+#             if i == "a" or i == "e" or i == "i" or i == "o" or i == "u":
+#                 this.count += 1
+#                 continue
+#             else:
+#                 this.result += i
+#         return this.result
+# class CountVowels(Vowels):
+#     def __init__(this):
+#         Vowels.__init__(this)
+#         this.count = 0
+#     def main(this, val):
+#         Vowels.process(this, val)
+#         return this.count, this.result
+# sample = CountVowels()
+# print(sample.main("Oni Ayodeji"))
+# sample.new = "hi"
+# print(sample.new)
+# #
+# #
+# def check(val):
+#     if val < 10:
+#         raise ValueError
+# try:
+#     check(300)
+# except ValueError:
+#     print("Value is too small")
+# #
+# #
