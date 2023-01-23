@@ -1,14 +1,3 @@
-# fnam = input("May I have your first name, please? ")
-# lnam = input("May I have your last name, please? ")
-# print("Thank you.", end = "")
-# print("Your name is " + fnam + " " + lnam + ".")
-# #
-# #
-# #print("+" + 10 * "-" + "+")
-# #print(("|" + " " * 10 + "|\n") * 5)
-# #print("+" + 10 * "-" + "+")
-# #
-# #
 # #x = float(input("Enter value for x: "))
 # #y = (1 / (x + 1 /(x + 1 / (x + (1 / x)))))
 # #print("y =", y)
