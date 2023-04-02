@@ -1,10 +1,21 @@
+# fnam = input("May I have your first name, please? ")
+# lnam = input("May I have your last name, please? ")
+# print("Thank you.", end = "")
+# print("Your name is " + fnam + " " + lnam + ".")
+# # (Done)
+# #
+# #print("+" + 10 * "-" + "+")
+# #print(("|" + " " * 10 + "|\n") * 5)
+# #print("+" + 10 * "-" + "+")
+# # (Done)
+# #
 # #x = float(input("Enter value for x: "))
 # #y = (1 / (x + 1 /(x + 1 / (x + (1 / x)))))
 # #print("y =", y)
-# #
+# # (skip)
 # #
 # print(642 / 60)
-# #
+# # (Skip)
 # #
 # hour = int(input("Starting time (hours): "))
 # while hour >= 24:
@@ -31,35 +42,35 @@
 #    number = int(input("Enter a number or type -1 to stop: "))
 # #Print the largest number.
 # print("The largest number is:", largest_number)
-# #
+# #(Done)
 # #
 # number = 0
 # while number != 7000000:
 #    number += 1
 #    print(number, number, sep = ",")
-# #
+# #(skip)
 # #
 # print("""uwbdfuhjrn
 # \wdeurbtguenjfg
 # iunwuefhgjneiuwerjigfn
 # uedbrfgudhis""")
-# #
+# #(skip)
 # #
 # for i in range(1, 110):
-#    print("The value of i is currently", i, end = ". ")
+#    print("The value of i is currently", i, end = ". \n")
 #    pass
-# #
+# #(Done)
 # #
 # name = "ayodeji"
 # for i in name:
 #    print(i)
-# #
+# #(Done)
 # #
 # power = 1
-# for expo in range(10000):
+# for expo in range(51):
 #    print("2 to the power of", expo, "is", power)
 #    power *= 2
-# #
+# #(Done)
 # #
 # import time
 # for i in range(1,6):
@@ -1146,3 +1157,41 @@
 #     print("Value is too small")
 # #
 # #
+# input text to encrypt
+# text = input("Enter message: ")
+
+# # enter valid shift value (repeat until it succeeds)
+# shift = 0
+
+# while shift == 0:
+#     try:    
+#         shift = int(input("Enter cipher's shift (1..25): "))
+#         if shift not in range(1,26):
+#         	raise ValueError
+#     except ValueError:
+#         shift = 0
+#     if shift == 0:
+#         print("Bad shift value!")
+
+# cipher = ''
+
+# for char in text:
+#     # is it a letter?
+#     if char.isalpha():
+#         # shift its code
+#         code = ord(char) + shift
+#         # find the code of the first letter (upper- or lower-case)
+#         if char.isupper():
+#             first = ord('A')
+#         else:
+#             first = ord('a')
+#         # make correction
+#         code -= first
+#         code %= 26
+#         # append encoded character to message
+#         cipher += chr(first + code)
+#     else:
+#         # append original character to message
+#         cipher += char
+
+# print(cipher)
