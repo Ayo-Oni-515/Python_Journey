@@ -15,11 +15,6 @@
 #    print(number, number, sep = ",")
 # #(skip)
 # #
-# print("""uwbdfuhjrn
-# \wdeurbtguenjfg
-# iunwuefhgjneiuwerjigfn
-# uedbrfgudhis""")
-# #(skip)
 # #
 # for i in range(1, 110):
 #    print("The value of i is currently", i, end = ". \n")
@@ -41,10 +36,6 @@
 # for i in range(1,6):
 #    print(i, "Misssissipi")
 #    time.sleep(1)
-# #
-# #
-# while True:
-#    print("H")
 # #
 # #
 # largest_number = -99999999
@@ -125,7 +116,6 @@
 # #Print the word assigned to word_without_vowels.
 #    word_without_vowels = letter
 #    print(word_without_vowels, end = "")
-# #
 # #
 # #
 # while True:
