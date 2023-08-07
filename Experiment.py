@@ -1,22 +1,3 @@
-# fnam = input("May I have your first name, please? ")
-# lnam = input("May I have your last name, please? ")
-# print("Thank you.", end = "")
-# print("Your name is " + fnam + " " + lnam + ".")
-# # (Done)
-# #
-# #print("+" + 10 * "-" + "+")
-# #print(("|" + " " * 10 + "|\n") * 5)
-# #print("+" + 10 * "-" + "+")
-# # (Done)
-# #
-# #x = float(input("Enter value for x: "))
-# #y = (1 / (x + 1 /(x + 1 / (x + (1 / x)))))
-# #print("y =", y)
-# # (skip)
-# #
-# print(642 / 60)
-# # (Skip)
-# #
 # hour = int(input("Starting time (hours): "))
 # while hour >= 24:
 #    print("ENTER CORRECT VALUE")
@@ -27,22 +8,6 @@
 #     mins = int(input("Starting time (minutes): "))
 # dura = int(input("Event duration (minutes): "))
 # #
-# #
-# #Store the current largest number here.
-# largest_number = -999999999
-# #Input the first value.
-# number = int(input("Enter a number or type -1 to stop: "))
-# #If the number is not equal to -1, continue.
-# while number != -1:
-#    # Is number larger than largest_number?
-#    if number > largest_number:
-#        # Yes, update largest_number.
-#        largest_number = number
-#    # Input the next number.
-#    number = int(input("Enter a number or type -1 to stop: "))
-# #Print the largest number.
-# print("The largest number is:", largest_number)
-# #(Done)
 # #
 # number = 0
 # while number != 7000000:
